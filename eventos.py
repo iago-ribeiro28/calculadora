@@ -45,13 +45,16 @@ def limpar():
     var['decimal'] = False
 
 
-def operatores(evento: str):
+def operatores(evento: str, contador):
     """ Salva o operator"""
     global var
     var['operator'] = evento
-    try:
-        var['x_val'] = formatar_numero()
-    except:
+    if contador == 1:
+        try:
+            var['x_val'] = formatar_numero()
+        except:
+            var['x_val'] = var['result']
+    else:
         var['x_val'] = var['result']
     limpar()
     return evento
