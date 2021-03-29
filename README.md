@@ -1,7 +1,7 @@
 # Calculadora
 
 Esse projeto foi criado para melhorar meus conhecimentos no Python.
-Aqui irei expor a algumas funcionalidades da calculadora e mostrar o que eu aprendi durante o processo de criação dela
+Aqui irei expor a algumas funcionalidades da calculadora e mostrar o que eu aprendi durante o processo de criação dela.
 
 O repertório em questão se trata de uma calculadora, que foi criada usando o módulo PySimpleGUI.
 
