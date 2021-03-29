@@ -34,7 +34,14 @@ Para melhor explicar o processo de criação irei dividir em três partes:
 Para começar eu decidi mudar os temas para se adequar ao meu gosto.
 Também adicinei um novo botão, o de mudar o sinal '+/-', com isso diminui o tamanho do botão do sinal de igual
 
-Aqui aprendi a mecher de forma melhor na criação de layout e a criar uma janela nova com o  PySimpleGUI,
+Aqui aprendi a mecher de forma melhor na criação de layout e a criar uma janela nova com o  PySimpleGUI.
+
+### Refatoração
+
+Para tornar o código mais legivel, decidi criar 3 novos arquivos, uma para colocar as variáveis, 
+para colocar o Layout e outra para colocar as funções da calculadora, deixando o loop principal no
+arquivo original.
+Também adicionei legendas para explicar o que cada parte da variável é responsável e o que cada função faz. 
 
 ### Funções
 
