@@ -1,13 +1,8 @@
-import PySimpleGUI as Sg
 from layout import layout
 from variavel import *
 
 
-layout = layout()
-
-window: object = Sg.Window('PyDataMath-II', layout=layout, background_color="#272533", size=(800, 500),
-                           return_keyboard_events=True, resizable=True)
-
+layout, window = layout()
 var, front, back = variavel()
 
 
@@ -27,11 +22,7 @@ def formatar_numero() -> float:
 def atualizar_display(display_valor: str):
     """ Essa função é responsável por atualizar o display da calculadora """
 
-    try:
-        window['_DISPLAY_'].update(value=f'{display_valor}')
-
-    except:
-        window['_DISPLAY_'].update(value=display_valor)
+    window['_DISPLAY_'].update(value=display_valor)
 
 
 # -----EVENTOS
@@ -44,6 +35,7 @@ def numberos(evento: str):
         back.append(evento)
     else:
         front.append(evento)
+    formatar_numero()
     atualizar_display(formatar_numero())
 
 
@@ -62,29 +54,35 @@ def limpar_digito():
 
     global var
 
-    var['apagar'] = True
-    if not var['decimal']:
-        front.pop()
-    else:
-        back.pop()
-    formatar_numero()
-    var['apagar'] = False
+    try:
+        var['apagar'] = True
+        if not var['decimal']:
+            front.pop()
+        else:
+            back.pop()
+        formatar_numero()
+        var['apagar'] = False
 
-    atualizar_display(formatar_numero())
+        atualizar_display(formatar_numero())
+        formatar_numero()
+
+    except:
+        limpar()
+        atualizar_display(0.0)
+        var['result'] = 0.0
 
 
-def operatores(evento: str, contador: int):
+# ------ funções de operação ------
+def operatores(evento: str):
     """ Salva o operator"""
 
     global var
     var['operator'] = evento
-    if contador == 1:
-        try:
-            var['x_val'] = formatar_numero()
-        except:
-            var['x_val'] = var['result']
-    else:
+    try:
+        var['x_val'] = formatar_numero()
+    except:
         var['x_val'] = var['result']
+
     limpar()
 
 
@@ -92,7 +90,6 @@ def porcentagem():
     global var
 
     try:
-        var['porcentagem'] = True
 
         digito1 = front.pop()
         digito2 = front.pop()
@@ -104,12 +101,13 @@ def porcentagem():
 
         formatar_numero()
         atualizar_display(formatar_numero())
-        var['porcentagem'] = False
 
     except:
         var['result'] = var['result'] / 100
 
         atualizar_display(var['result'])
+
+    operatores('*')
 
 
 def mudar_sinal(contador: int):
@@ -129,6 +127,7 @@ def mudar_sinal(contador: int):
         atualizar_display(var['result'])
 
 
+# --------- Resultado -------------
 def calcular():
     global var
 

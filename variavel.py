@@ -4,7 +4,7 @@ def variavel():
     back = []
     var: dict = {'sinal': '', 'operator': '', 'x_val': 0.0,
                  'y_val': 0.0, 'result': 0.0, 'decimal': False,
-                 'apagar': False, 'porcentagem': False}
+                 'apagar': False}
 
     return var, front, back
 

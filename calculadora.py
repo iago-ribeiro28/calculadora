@@ -24,10 +24,10 @@ while True:
 
     if evento in ['+', '-', '*', '/']:
         if contador_de_operadores == 1:
-            operatores(evento, contador_de_operadores)
+            operatores(evento)
         else:
             calcular()
-            operatores(evento, contador_de_operadores)
+            operatores(evento)
         contador_de_operadores += 1
 
     if evento == '=':

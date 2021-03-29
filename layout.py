@@ -15,7 +15,7 @@ def layout():
     layout: list = [
         [sg.Text('PyDataMath-II', size=(50, 1), justification='right', background_color="#272533",
                  text_color='white', font=('Franklin Gothic Book', 14, 'bold'))],
-        [sg.Text('0.0', size=(18, 1), justification='right', background_color='black', text_color='red',
+        [sg.Text('0.0', size=(21, 1), justification='right', background_color='black', text_color='red',
                  font=('Digital-7', 48), relief='sunken', key="_DISPLAY_")],
         [sg.Button('C', **botao_apagar), sg.Button('Ce', **botao_operacoes),
          sg.Button('%', **botao_operacoes), sg.Button("/", **botao_operacoes)],
@@ -28,4 +28,7 @@ def layout():
         [sg.Button('+/-', **botao_numeros), sg.Button('0', **botao_numeros),
          sg.Button('.', **botao_numeros), sg.Button('=', **botao_igual, bind_return_key=True)]
     ]
-    return layout
+
+    window: object = sg.Window('PyDataMath-II', layout=layout, background_color="#272533", size=(800, 500),
+                               return_keyboard_events=True, resizable=True)
+    return layout, window
