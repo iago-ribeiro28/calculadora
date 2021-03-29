@@ -29,6 +29,6 @@ def layout():
          sg.Button('.', **botao_numeros), sg.Button('=', **botao_igual, bind_return_key=True)]
     ]
 
-    window: object = sg.Window('PyDataMath-II', layout=layout, background_color="#272533", size=(800, 500),
+    window: object = sg.Window('PyDataMath-II', layout=layout, background_color="#272533", size=(580, 500),
                                return_keyboard_events=True, resizable=True)
     return layout, window
