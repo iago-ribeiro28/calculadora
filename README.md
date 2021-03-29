@@ -12,7 +12,7 @@ O repertório em questão se trata de uma calculadora, que foi criada usando o m
 
 ## Funcionalidades
 
-Além dos botões de cada número calculadora conta com os botões de somar, subtrair, multiplicar, dividir e igual, 
+Além dos botões de cada número a calculadora conta com os botões de somar, subtrair, multiplicar, dividir e igual, 
 também contém o botão ponto, para colocar em números decimáis, dois botões de apagar, um que apaga todos 
 os dados da calculadora e outro para apagar o último número inserido. 
 Ela também tem a funcionalidade de trocar o sinal da operação.
