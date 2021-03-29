@@ -89,6 +89,7 @@ def operatores(evento: str, contador: int):
 
 def mudar_sinal(contador: int):
     global var
+
     try:
         if contador % 2 == 1:
             var['sinal'] = '-'
@@ -96,6 +97,7 @@ def mudar_sinal(contador: int):
             var['sinal'] = ''
 
         atualizar_display(formatar_numero())
+
     except:
         var['result'] = -var['result']
 
@@ -104,11 +106,13 @@ def mudar_sinal(contador: int):
 
 def calcular():
     global var
+
     var['y_val'] = formatar_numero()
     try:
         var['result'] = eval(str(var['x_val']) + var['operator'] + str(var['y_val']))
         atualizar_display(var['result'])
         limpar()
+
     except:
         atualizar_display("ERROR!")
         limpar()
