@@ -20,7 +20,7 @@ Ela também tem a funcionalidade de trocar o sinal da operação.
 ## O que eu aprendi durante a criação
 
 Nota:
-Para modelo inicial usei a calculadora criada pelo Israel Dryer
+Para modelo inicial usei a calculadora criada pelo Israel Dryer.
 Se vc deseja ver o projeto dele, pode acessar usando o seguinte link:
 https://github.com/israel-dryer/PyDataMath-II
 
@@ -32,13 +32,13 @@ Para melhor explicar o processo de criação irei dividir em três partes:
 ### Layout
 
 Para começar eu decidi mudar os temas para se adequar ao meu gosto.
-Também adicinei um novo botão, o de mudar o sinal '+/-', com isso diminui o tamanho do botão do sinal de igual
+Também adicinei um novo botão, o de mudar o sinal '+/-', com isso diminui o tamanho do botão do sinal de igual.
 
-Aqui aprendi a mecher de forma melhor na criação de layout e a criar uma janela nova com o  PySimpleGUI.
+Aqui aprendi a mexer de forma melhor na criação de layout e a criar uma janela nova com o  PySimpleGUI.
 
 ### Refatoração
 
-Para tornar o código mais legivel, decidi criar 3 novos arquivos, uma para colocar as variáveis, 
+Para tornar o código mais legível, decidi criar 3 novos arquivos, uma para colocar as variáveis, 
 para colocar o Layout e outra para colocar as funções da calculadora, deixando o loop principal no
 arquivo original.
 Também adicionei legendas para explicar o que cada parte da variável é responsável e o que cada função faz. 
@@ -48,19 +48,21 @@ Também adicionei legendas para explicar o que cada parte da variável é respon
 Ao usar o modelo inicial da calculadora percebi alguns bugs,
 Então me concentrei em arrumá-los.
 
-O primeiro bug encontrado foi o uso do botão 'Ce'
+O primeiro bug encontrado foi o uso do botão 'Ce'.
 Ao usar esse botão, se espera que somente o último número fosse apagado,
 porém não era o que acontecia, então o modifiquei, criando uma nova função
 para que somente o último dígito fosse apagado.
 
-O segundo bug arrumado, foi pelo uso do '%'
+O segundo bug arrumado, foi pelo uso do '%'.
 Ao usa-lo em uma calculadora normal, espera-se que o número colocado seja dividido por 100,
 e logo após estar pronto para o usuário escrever o dígito que deseja para ser multiplicado, 
 porém não era isso que acontecia.
 Então eu criei uma nova função para que isso aconteça.
 
-O terceiro bug, foi na hora de fazer uma conta com mais de 2 números, onde o algorítmo não salvava mais que dois números
+O terceiro bug, foi na hora de fazer uma conta com 3 números ou mais, onde o algorítmo não salvava mais que dois números,
 então quando se colocava o terceiro ele apagava o priméiro. Eu corrigi esse bug para que fosse possível realizar várias 
 operações em sequência.
 
 Para adicionar o botão '+/-', foi necessário criar uma nova função e uma variável para ela. 
+
+Essas foram as principais modificações feitas no código.
