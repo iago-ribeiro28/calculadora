@@ -1,8 +1,9 @@
 import PySimpleGUI as Sg
 from layout import layout
 from variavel import *
-layout = layout()
 
+
+layout = layout()
 
 window: object = Sg.Window('PyDataMath-II', layout=layout, background_color="#272533", size=(800, 500),
                            return_keyboard_events=True, resizable=True)
@@ -85,6 +86,30 @@ def operatores(evento: str, contador: int):
     else:
         var['x_val'] = var['result']
     limpar()
+
+
+def porcentagem():
+    global var
+
+    try:
+        var['porcentagem'] = True
+
+        digito1 = front.pop()
+        digito2 = front.pop()
+
+        if digito2 != 0 or digito1 != 0:
+            back.append(digito2)
+            if digito1 != 0:
+                back.append(digito1)
+
+        formatar_numero()
+        atualizar_display(formatar_numero())
+        var['porcentagem'] = False
+
+    except:
+        var['result'] = var['result'] / 100
+
+        atualizar_display(var['result'])
 
 
 def mudar_sinal(contador: int):

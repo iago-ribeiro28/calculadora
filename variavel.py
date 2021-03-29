@@ -2,9 +2,9 @@ def variavel():
 
     front = []
     back = []
-    var: dict = {'sinal': '', 'decimal': False,
-                 'x_val': 0.0, 'y_val': 0.0, 'result': 0.0,
-                 'operator': '', 'apagar': False}
+    var: dict = {'sinal': '', 'operator': '', 'x_val': 0.0,
+                 'y_val': 0.0, 'result': 0.0, 'decimal': False,
+                 'apagar': False, 'porcentagem': False}
 
     return var, front, back
 

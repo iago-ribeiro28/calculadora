@@ -38,7 +38,7 @@ while True:
         var['decimal'] = True
 
     if evento == '%':
-        atualizar_display(var['result'] / 100.0)
+        porcentagem()
 
     if evento == '+/-':
         mudar_sinal(contador_de_sinais)
