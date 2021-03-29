@@ -1,18 +1,23 @@
 def variavel():
 
-    var: dict = {'front': [], 'back': [], 'decimal': False,
-                 'x_val': 0.0, 'y_val': 0.0, 'result': 0.0, 'operator': ''}
+    front = []
+    back = []
+    var: dict = {'sinal': '', 'decimal': False,
+                 'x_val': 0.0, 'y_val': 0.0, 'result': 0.0,
+                 'operator': '', 'apagar': False}
 
-    return var
+    return var, front, back
 
 
 # -------Significado de cada variável----------------
 
-# 'front' = é uma lista que armazena os números colocados na calculadora,
+# front = é uma lista que armazena os números colocados na calculadora,
 # O 'front' é responsável peles números antes da vígurla
 
-# 'back' = ele tem a mesma função que o 'front'
+# back = ele tem a mesma função que o 'front'
 # A diferença é que o 'back' se encarrega pelos números depois da vírgula
+
+# 'sinal' usada para mudar o sinal da operação
 
 # 'x_val' é encarregada de armazenar o número depois de colocado a operação
 

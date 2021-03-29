@@ -17,7 +17,7 @@ def layout():
                  text_color='white', font=('Franklin Gothic Book', 14, 'bold'))],
         [sg.Text('0.0', size=(18, 1), justification='right', background_color='black', text_color='red',
                  font=('Digital-7', 48), relief='sunken', key="_DISPLAY_")],
-        [sg.Button('C', **botao_apagar), sg.Button('()', **botao_operacoes),
+        [sg.Button('C', **botao_apagar), sg.Button('Ce', **botao_operacoes),
          sg.Button('%', **botao_operacoes), sg.Button("/", **botao_operacoes)],
         [sg.Button('7', **botao_numeros), sg.Button('8', **botao_numeros),
          sg.Button('9', **botao_numeros), sg.Button("*", **botao_operacoes)],
@@ -25,7 +25,7 @@ def layout():
          sg.Button('6', **botao_numeros), sg.Button("-", **botao_operacoes)],
         [sg.Button('1', **botao_numeros), sg.Button('2', **botao_numeros),
          sg.Button('3', **botao_numeros), sg.Button("+", **botao_operacoes)],
-        [sg.Button('0', **botao_numeros), sg.Button('.', **botao_numeros),
-         sg.Button('=', **botao_igual, bind_return_key=True)]
+        [sg.Button('+/-', **botao_numeros), sg.Button('0', **botao_numeros),
+         sg.Button('.', **botao_numeros), sg.Button('=', **botao_igual, bind_return_key=True)]
     ]
     return layout
